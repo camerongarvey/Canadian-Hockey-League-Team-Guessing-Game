@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hockey Team Guesser</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="win-screen" class="overlay-screen hidden">
+    <div class="message-box win">
+        <h1>You Win!</h1>
+        <p>Congratulations! You guessed the team!</p>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
+</div>
+
+<div id="lose-screen" class="overlay-screen hidden">
+    <div class="message-box lose">
+        <h1>You Lose</h1>
+        <p>Better luck next time.</p>
+        <button onclick="location.reload()">Try Again</button>
+    </div>
+</div>
+
+
+<div id="hints">
+    <h1>Hints:</h1>
+    <p id="hint-0"></p>
+    <p id="hint-1"></p>
+    <p id="hint-2"></p>
+    <p id="hint-3"></p>
+    <p id="hint-4"></p>
+</div>
+
+<div id="guesses">
+    <h1>Guesses:</h1>
+    <p id="guess-0"></p>
+    <p id="guess-1"></p>
+    <p id="guess-2"></p>
+    <p id="guess-3"></p>
+    <p id="guess-4"></p>
+    <p id="guess-5"></p>
+</div>
+
+
+<form id="myForm">
+    <label for="wordInput">Guess a team:</label><br />
+    <input type="text" id="wordInput" name="word" autocomplete="off" />
+    <button type="submit">Submit</button>
+    <p id="error" style="color:red; display:none;">Please select a valid team.</p>
+</form>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
