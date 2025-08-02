@@ -475,6 +475,9 @@ function showWinScreen() {
 }
 function showLoseScreen() {
     const loseScreen = document.getElementById("lose-screen");
+    const element = document.getElementById("correct-answer");
+    if (element)
+        element.textContent = "The correct team was: " + team;
     if (loseScreen)
         loseScreen.classList.remove("hidden");
 }
